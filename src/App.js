@@ -10,14 +10,7 @@ class App extends React.Component {
     constructor(){
         super();
         this.state = {
-            monsters:[
-            {
-            name: 'Frankenstein'
-            },{
-            name: 'Dracula'
-            },{
-            name: 'Zombie'
-        }]}
+            monsters:[]}
         }
 
     componentDidMount() {
@@ -29,14 +22,7 @@ class App extends React.Component {
     render(){
       return (
         <div className="App">
-            <CardList >
-                Yihua
-            </CardList>
-            {
-                this.state.monsters.map(monster => <h1 key={uuidv4()}> { monster.name } </h1>
-
-                )
-            }
+            <CardList monsters={this.state.monsters} />
         </div>
       );
     }}
